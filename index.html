@@ -1,0 +1,195 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="LUGX Gaming - your ultimate destination for trending games, top categories, and the best gaming experience.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+
+    <title>LUGX Gaming</title>
+
+<body>
+    <header class="headercontainer">
+        <div class="header">
+            <a href="index.html" class="logo ">
+                <img src="./images/logo.png" alt="LUGX Logo">
+            </a>
+            <button class="menuToggle" id="menuToggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <nav class="headerlinks" id="headerlinks">
+                <a href="index.html" class="active">Home</a>
+                <a href="#trendinggames">Our Shop</a>
+                <a href="#mostplayed">Product Details </a>
+                <a href="contactUs.html">Contact Us</a>
+                <button class="btn" id="signinbb">Sign In</button>
+            </nav>
+        </div>
+    </header>
+    <main class="ladingpagecontainer">
+        <div class="ladingpage">
+            <div class="leftside">
+                <p class="welcome"> Welcome To LUGX</p>
+                <h1 class="slogan">Your Ultimate Gaming Destination!</h1>
+                <p class="description">LUGX Gaming — your go-to platform for discovering top-rated games, exploring new
+                    releases, and staying ahead in the gaming world. Join millions of gamers who trust LUGX for the best
+                    experience.
+                </p>
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Search for a Game...">
+                    <button class="btn searchBtn" id="searchBtn ">SEARCH NOW</button>
+                </div>
+                <P id="searchResult" class="searchResult"></P>
+
+
+            </div>
+            <div class="imageContainer">
+                <img src="/images/banner-image.jpg" alt="Gaming banner-image">
+            </div>
+        </div>
+    </main>
+    <!-- ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,, -->
+    <section class="treadingcontainer" id="trading">
+        <span> Hot Right Now </span>
+        <div class="treadingHeader">
+            <h1>Treading Games</h1>
+            <button class="btn" id="viewAllTrending"> View All</button>
+        </div>
+        <div class="trendingCard" id="trendingCard">
+            <div class="card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                <img src="./images/trending-01.jpg" alt="Assassin's Creed">
+                <div class="cardInfo">
+                    <div class="cardName">
+                        <p>Action / RPG</p>
+                        <h3>Assassin's Creed</h3>
+                    </div>
+                    <a href="#" class="icon">
+                        <img src="./images/online-shopping.png" alt="Buy Assassin's Creed">
+                    </a>
+                </div>
+            </div>
+
+            <div class="card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                <img src="./images/trending-02.jpg" alt="Cyberpunk 2077">
+                <div class="cardInfo">
+                    <div class="cardName">
+                        <p>Open World</p>
+                        <h3>Cyberpunk 2077</h3>
+                    </div>
+                    <a href="#" class="icon">
+                        <img src="./images/online-shopping.png" alt="Buy Cyberpunk 2077">
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                <img src="./images/trending-03.jpg" alt="God Of War">
+                <div class="cardInfo">
+                    <div class="cardName">
+                        <p>Adventure</p>
+                        <h3>God Of War</h3>
+                    </div>
+                    <a href="#" class="icon">
+                        <img src="./images/online-shopping.png" alt="Buy God of War">
+                    </a>
+                </div>
+            </div>
+            <div class="card" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                <img src="./images/trending-04.jpg" alt="Elden Ring">
+                <div class="cardInfo">
+                    <div class="cardName">
+                        <p>Dark Fantasy</p>
+                        <h3>Elden Ring</h3>
+                    </div>
+                    <a href="#" class="icon">
+                        <img src="./images/online-shopping.png" alt="Buy Elden Ring">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="mostContainer" id="mostPlayed">
+        <div class="mostPlayed">
+            <span>top games</span>
+            <div class="mostHeader">
+                <h1>Most Played</h1>
+                <button class="btn" id="viewAllMost">View All</button>
+            </div>
+        </div>
+    </section>
+    <section class="categoryContainer">
+        <div class="category">
+            <div class="categoryHeader">
+                <span>top games</span>
+                <h1>Top Categories</h1>
+            </div>
+            <div class="categoryCards" id="categoryCards">
+                <div class="card"
+                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="genre">Action</div>
+                    <div class="cardImg">
+                        <img src="./images/categories-01.jpg" alt="Action">
+                    </div>
+                </div>
+                <div class="card"
+                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="genre">RPG </div>
+                    <div class="cardImg">
+                        <img src="./images/categories-02.jpg" alt="RPG">
+                    </div>
+                </div>
+                <div class="card"
+                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="genre">Adventure</div>
+                    <div class="cardImg">
+                        <img src="./images/categories-03.jpg" alt="Adventure">
+                    </div>
+                </div>
+                <div class="card"
+                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="genre">Shooter</div>
+                    <div class="cardImg">
+                        <img src="./images/categories-04.jpg" alt="Shooter">
+                    </div>
+                </div>
+                <div class="card"
+                    style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
+                    <div class="genre">Strategy</div>
+                    <div class="cardImg">
+                        <img src="./images/categories-05.jpg" alt="Strategy">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="counterBanner">
+        <p id="visitMsg"> Welcome! This is your first visit to LUGX Gaming.</p>
+
+    </div>
+    <footer class="footerContainer">
+        <div class="footer">
+
+            " copyright © "
+            <span id="footerYear">2026 </span>
+            LUGX Gaming Company. All
+            rights reserved.
+
+        </div>
+    </footer>
+    <div class="modalOverlay" id="modalOverlay">
+        <div class="modal">
+            <button class="modalClose" id="modalClose"></button>
+            <h2>Sign In</h2>
+            <input type="text" id="modalUsername" placeholder="Username">
+            <input type="password" id="modalPassword" placeholder="Password">
+            <p id="modalMsg" class="modalMsg"> </p>
+            <button class="btn" id="modalSubmit">Login </button>
+        </div>
+    </div>
+    <script src="index.JS"></script>
+</body>
+</head>
+
+</html>
