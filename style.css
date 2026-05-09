@@ -1,0 +1,1174 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0b0b0d;
+    color: #fff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* زززززززززززززززززززززززززززززززززززززززززززززززززززززززززززززززززززز */
+/* سيشن الاول */
+/* تنسيق عام للقسم */
+.trending-section {
+    background-color: #120a2e;
+    /* خلفية الصفحة الكحلي الغامق */
+    padding: 50px 30px;
+    color: white;
+    font-family: sans-serif;
+}
+
+/* تنسيق الهيدر العلوي (نفس القسم السابق) */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hot-tag {
+    color: #ff6b35;
+    /* برتقالي */
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.trending-section h1 {
+    font-size: 2rem;
+    margin: 5px 0 0 0;
+}
+
+.view-all {
+    background-color: #ff7a45;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* تنسيق الشبكة (Flexbox للأربعة كروت) */
+.trending-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* تنسيق الكارت الواحد (يجب أن يكون relative) */
+.trending-card {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    /* الارتفاع أطول قليلاً من القسم السابق */
+    border-radius: 25px;
+    overflow: hidden;
+    /* لضمان حواف الصورة الدائرية */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.trending-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* الطبقة التي تحتوي على النصوص وتطفو فوق الصورة */
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    /* تغطي النصف السفلي لعمل التدرج */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    /* النص على اليسار والأيقونة على اليمين */
+    align-items: flex-end;
+    /* لإنزال المحتوى للأسفل */
+    box-sizing: border-box;
+    /* لضمان أن الـ padding لا يزيد الارتفاع */
+}
+
+/* تنسيق النصوص داخل الطبقة */
+.card-text {
+    flex-grow: 1;
+    /* لتأخذ المساحة المتاحة */
+}
+
+.genre {
+    color: #8e8eb2;
+    font-size: 0.85rem;
+    margin: 0 0 5px 0;
+}
+
+.trending-card h3 {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* تنسيق أيقونة سلة التسوق */
+.cart-icon {
+
+    color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    transition: 0.3s;
+}
+
+/* تأثير عند تمرير الماوس على الكارت */
+.trending-card:hover {
+    transform: scale(1.02);
+}
+
+.cart-icon:hover {
+    background-color: #e6693a;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* سيشن اول  */
+.hero-section {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.game-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.bg-alt {
+    background-color: #1a1a1e;
+}
+
+h2 {
+    color: #00ffcc;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* Flexible Grid Layouts */
+.grid-4,
+.grid-6,
+.grid-5 {
+    display: grid;
+    gap: 15px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-6 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* 2 rows of 3 */
+.grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s;
+    border: 2px solid #333;
+}
+
+img:hover {
+    transform: scale(1.05);
+    border-color: #00ffcc;
+}
+
+/* Change Span (the visit number) to Orange */
+span {
+    color: rgb(196, 75, 27);
+    font-weight: bold;
+}
+
+/* Container for your images */
+.container {
+    padding: 20px;
+}
+
+/* تنسيق section 3 */
+/* تنسيق عام للقسم */
+.most-played {
+    background-color: #120a2e;
+    /* لون الخلفية الكحلي الغامق */
+    padding: 50px 20px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* تنسيق الهيدر العلوي */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-tag {
+    color: #ff6b35;
+    /* برتقالي */
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.view-all {
+    background-color: #ff7a45;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* تنسيق شبكة الألعاب */
+.games-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    /* لتنزيل الكروت تحت بعض في الشاشات الصغيرة */
+}
+
+/* تنسيق الكارت الواحد */
+.game-card {
+    background-color: #1a143d;
+    width: 180px;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.game-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px 10px;
+}
+
+.genre {
+    color: #8e8eb2;
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+}
+
+.game-card h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    height: 40px;
+    /* لتوحيد ارتفاع العناوين */
+}
+
+/* تنسيق زر Explore */
+.explore-btn {
+    background-color: #ff7a45;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    width: 90%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background-color: #e6693a;
+}
+
+
+
+
+
+
+
+
+/* ---------- FOOTER ---------- */
+.footerContainer {
+    background: linear-gradient(135deg, #0d0620 0%, #1a0a40 50%, #2e1163 100%);
+    margin-top: 80px;
+    padding: 60px 40px 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footerContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #6c3ff5, #ff7a3d, #6c3ff5);
+    background-size: 200% 100%;
+    animation: gradientSlide 3s ease infinite;
+}
+
+@keyframes gradientSlide {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.footer {
+    max-width: 1300px;
+    margin: auto;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-brand {
+    flex: 1;
+    max-width: 320px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.footer-logo img {
+    width: 45px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    transition: filter 0.3s ease;
+}
+
+.footer-logo img:hover {
+    transform: none !important;
+    border: none !important;
+    border-color: transparent !important;
+    filter: drop-shadow(0 0 12px rgba(108, 63, 245, 0.8)) drop-shadow(0 0 25px rgba(255, 122, 61, 0.5));
+}
+
+.footer-logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.footer-brand p {
+    color: #a0a0b8;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.social-links {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c9b8ff;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #6c3ff5, #ff7a3d);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(108, 63, 245, 0.3);
+}
+
+.footer-links {
+    display: flex;
+    gap: 60px;
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #6c3ff5, #ff7a3d);
+    border-radius: 2px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: #a0a0b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.footer-column ul li a:hover {
+    color: #ff7a45;
+    transform: translateX(5px);
+}
+
+.newsletter-text {
+    color: #a0a0b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    padding: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-form:focus-within {
+    border-color: #6c3ff5;
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    padding: 10px 14px;
+    color: #fff;
+    flex: 1;
+    outline: none;
+    font-size: 0.9rem;
+    min-width: 0;
+}
+
+.newsletter-form input::placeholder {
+    color: #6b6b85;
+}
+
+.newsletter-form button {
+    background: linear-gradient(135deg, #6c3ff5, #ff7a3d);
+    border: none;
+    color: #fff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-form button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(108, 63, 245, 0.4);
+}
+
+.footer-bottom {
+    padding-top: 30px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #6b6b85;
+    font-size: 0.9rem;
+}
+
+.footer-bottom span {
+    color: #ff7a45;
+    font-weight: 600;
+}
+
+
+/* ---------- VISIT COUNTER BANNER ---------- */
+.counterBanner {
+    max-width: 1300px;
+    margin: 60px auto 0;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.counterBanner p {
+    background: linear-gradient(90deg, #6c3ff5, #ff7a3d);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 16px 30px;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.main-header {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #0b0d17;
+    /* خلفية الصفحة الغامقة */
+    padding: 40px;
+
+}
+
+
+
+/* تنسيق الحاوية الأساسية */
+.categories-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background-color: #0b0d17;
+    /* خلفية الصفحة الغامقة */
+    padding: 40px;
+}
+
+/* تنسيق الكارت */
+.category-card {
+    width: 200px;
+    background-color: #1a1c26;
+    border-radius: 15px;
+    /* حواف دائرية للكارت */
+    overflow: hidden;
+    /* لضمان أن الصورة لا تخرج عن الحواف الدائرية */
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-10px);
+    /* تأثير عند مرور الماوس */
+}
+
+/* تنسيق الجزء العلوي (البنفسجي) */
+.card-header {
+    background-color: #6a4ce1;
+    /* اللون البنفسجي من الصورة */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    font-size: 1.1em;
+}
+
+/* تنسيق الصورة */
+.category-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    /* لضمان عدم تشوه الصورة */
+    display: block;
+}
+
+
+
+
+/* first page */
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    /* يفضل استخدام خط Poppins من Google Fonts */
+}
+
+body {
+    background: linear-gradient(135deg, #2a0845 0%, #170733 100%);
+    color: white;
+    min-height: 100vh;
+
+}
+
+.main-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* القائمة العلوية */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    gap: 10px;
+}
+
+.logo img {
+    width: 125px;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s, filter 0.3s ease;
+    border: 2px solid #333;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
+    border-color: #00ffcc;
+    filter: drop-shadow(0 0 6px rgba(0, 255, 204, 0.4));
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ccc;
+    transition: 0.3s;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: white;
+    background: #5d3df1;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.sign-in-btn {
+    background-color: #ff7a45;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    text-decoration: none;
+    transition: 0.3s;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+/* القسم الرئيسي Hero */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.welcome-txt {
+    color: #ff7a45;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin: 20px 0;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    color: #bbb;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* بار البحث */
+.search-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 40px;
+    display: flex;
+    padding: 5px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.search-container input {
+    background: transparent;
+    border: none;
+    padding: 15px 25px;
+    color: white;
+    flex: 1;
+    outline: none;
+}
+
+.search-btn {
+    background: #ff7a45;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* الصورة */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    width: 85%;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ========================================
+   RESPONSIVE DESIGN - MEDIA QUERIES
+   ======================================== */
+
+/* Tablet (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+    .main-wrapper {
+        padding: 15px;
+    }
+
+    .hero {
+        padding: 40px 0;
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .trending-grid {
+        flex-wrap: wrap;
+    }
+
+    .trending-card {
+        width: calc(50% - 20px);
+        height: 320px;
+    }
+
+    .games-grid {
+        gap: 20px;
+    }
+
+    .game-card {
+        width: calc(33.333% - 20px);
+        flex: 0 0 calc(33.333% - 20px);
+    }
+
+    .categories-container {
+        flex-wrap: wrap;
+        padding: 30px;
+    }
+
+    .category-card {
+        width: calc(33.333% - 15px);
+    }
+}
+
+/* Tablet Small (max-width: 768px) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        order: 2;
+    }
+
+    .hero-image {
+        order: 1;
+        justify-content: center;
+    }
+
+    .hero-content p {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .section-header {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .trending-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trending-card {
+        width: 100%;
+        max-width: 400px;
+        height: 300px;
+    }
+
+    .games-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .game-card {
+        width: calc(50% - 15px);
+        flex: 0 0 calc(50% - 15px);
+    }
+
+    .categories-container {
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .category-card {
+        width: calc(50% - 15px);
+    }
+
+    .footerContainer {
+        padding: 40px 30px 25px;
+    }
+
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .footer-brand {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .footer-logo {
+        justify-content: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .footer-column {
+        text-align: center;
+    }
+
+    .footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .newsletter-form {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .counterBanner p {
+        font-size: 0.9rem;
+        padding: 14px 20px;
+    }
+}
+
+/* Mobile (max-width: 480px) */
+@media screen and (max-width: 480px) {
+    .main-wrapper {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 120px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 8px 15px;
+    }
+
+    .sign-in-btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .hero {
+        padding: 20px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.6rem;
+    }
+
+    .welcome-txt {
+        font-size: 0.9rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+    }
+
+    .search-container {
+        flex-direction: column;
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .search-container input {
+        padding: 12px 15px;
+        text-align: center;
+    }
+
+    .search-btn {
+        width: 100%;
+        padding: 12px;
+        border-radius: 15px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        border-radius: 20px;
+    }
+
+    .trending-section {
+        padding: 30px 15px;
+    }
+
+    .trending-card {
+        height: 250px;
+    }
+
+    .trending-section h1,
+    .most-played h1 {
+        font-size: 1.5rem;
+    }
+
+    .view-all {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .most-played {
+        padding: 30px 15px;
+    }
+
+    .game-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .game-card img {
+        height: 180px;
+    }
+
+    .main-header {
+        padding: 25px 15px;
+    }
+
+    .main-title {
+        font-size: 1.5rem;
+    }
+
+    .sub-title {
+        font-size: 0.8rem;
+    }
+
+    .categories-container {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .category-card {
+        width: 100%;
+    }
+
+    .category-card img {
+        height: 200px;
+    }
+
+    .card-header {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    .counterBanner {
+        margin: 40px auto 0;
+        padding: 0 15px;
+    }
+
+    .counterBanner p {
+        font-size: 0.85rem;
+        padding: 12px 15px;
+    }
+
+    .footerContainer {
+        margin-top: 50px;
+        padding: 35px 20px 20px;
+    }
+
+    .footer-links {
+        gap: 25px;
+    }
+
+    .footer-column h4 {
+        font-size: 1rem;
+    }
+
+    .newsletter-form {
+        max-width: 100%;
+    }
+}
+
+/* Extra Small Mobile (max-width: 360px) */
+@media screen and (max-width: 360px) {
+    .hero-content h1 {
+        font-size: 1.3rem;
+    }
+
+    .trending-card {
+        height: 220px;
+    }
+
+    .game-card img {
+        height: 150px;
+    }
+
+    .category-card img {
+        height: 180px;
+    }
+}
